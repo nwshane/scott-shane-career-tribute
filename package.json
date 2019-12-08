@@ -1,0 +1,15 @@
+{
+  "name": "create-next-example-app",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "update-data": "gsjson 1kTH9wWJEPsQTsDimyFtAyNv-tJjdr6dQfXUJG6ch3m4 sheetData/articles.json --worksheet Articles"
+  },
+  "dependencies": {
+    "google-spreadsheet-to-json": "^1.0.0",
+    "next": "^9.1.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}

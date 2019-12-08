@@ -7,7 +7,7 @@ export default () => (
     <Head title="Think of Site Name" />
     <ul>
       {articles.map(article => (
-        <div>
+        <div key={`${article.title}${article.notes}`}>
           <h2>{article.title}</h2>
           <p>{formatDate(article.date)}</p>
         </div>

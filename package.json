@@ -4,13 +4,17 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
+    "build-full": "run-s update-all build export",
     "update-articles": "gsjson 1kTH9wWJEPsQTsDimyFtAyNv-tJjdr6dQfXUJG6ch3m4 sheetData/articles.json --worksheet Articles",
-    "update-reflections": "gsjson 1kTH9wWJEPsQTsDimyFtAyNv-tJjdr6dQfXUJG6ch3m4 sheetData/reflections.json --worksheet Reflections"
+    "update-reflections": "gsjson 1kTH9wWJEPsQTsDimyFtAyNv-tJjdr6dQfXUJG6ch3m4 sheetData/reflections.json --worksheet Reflections",
+    "update-all": "run-p update-articles update-reflections"
   },
   "dependencies": {
     "google-spreadsheet-to-json": "^1.0.0",
     "lodash": "^4.17.15",
     "next": "^9.1.4",
+    "npm-run-all": "^4.1.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   }

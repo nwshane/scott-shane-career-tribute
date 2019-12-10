@@ -8,7 +8,7 @@
     "build-full": "run-s update-all build export",
     "update-articles": "gsjson 1kTH9wWJEPsQTsDimyFtAyNv-tJjdr6dQfXUJG6ch3m4 sheetData/articles.json --worksheet Articles",
     "update-reflections": "gsjson 1kTH9wWJEPsQTsDimyFtAyNv-tJjdr6dQfXUJG6ch3m4 sheetData/reflections.json --worksheet Reflections",
-    "update-all": "run-p update-articles update-reflections"
+    "update-all": "mkdir -p sheetData && run-p update-articles update-reflections"
   },
   "dependencies": {
     "google-spreadsheet-to-json": "^1.0.0",

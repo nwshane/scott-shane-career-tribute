@@ -9,7 +9,7 @@ const reflectionsByArticle = groupBy(reflections, "article");
 
 export default () => (
   <div>
-    <Head title="Think of Site Name" />
+    <Head title="Scott Shane Opus" />
     <ul>
       {articles.map(article => (
         <div key={`${article.title}${article.notes}`}>

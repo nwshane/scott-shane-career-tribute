@@ -7,7 +7,10 @@ export default () => (
     <Head title="Scott Shane Opus" />
     <ul>
       {articles.map(article => (
-        <ArticleItem article={article} />
+        <ArticleItem
+          article={article}
+          key={`${article.title}${article.notes}`}
+        />
       ))}
     </ul>
 

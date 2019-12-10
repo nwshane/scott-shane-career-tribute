@@ -6,7 +6,7 @@ import { formatDate } from "../helpers";
 const reflectionsByArticle = groupBy(reflections, "article");
 
 export default ({ article }) => (
-  <div className="container">
+  <li className="container">
     <p className="line-above-title">
       {formatDate(article.date) || "No Date"} | {article.mediaCompany}
     </p>
@@ -15,7 +15,7 @@ export default ({ article }) => (
         {article.title}
       </a>
     </h2>
-    {article.excerpt && <div>Excerpt: {article.excerpt}</div>}
+    {article.excerpt && <div className="excerpt">{article.excerpt}</div>}
     <ul>
       {reflectionsByArticle[article.title] &&
         reflectionsByArticle[article.title].map(reflection => (
@@ -29,16 +29,28 @@ export default ({ article }) => (
     <style jsx>{`
       .container {
         margin-bottom: 40px;
+        list-style-type: none;
+        padding-left: 0;
       }
       .line-above-title {
         font-size: 13px;
-        margin-bottom: 0px;
+        margin-bottom: -5px;
       }
       .title {
         font-size: 24px;
         margin: 0;
-        margin-top: -5px;
+      }
+      .excerpt {
+        margin-left: 20px;
+        margin-top: 15px;
+      }
+      .excerpt:before {
+        content: "“";
+        font-size: 30px;
+      }
+      .excerpt:after {
+        content: "”";
       }
     `}</style>
-  </div>
+  </li>
 );

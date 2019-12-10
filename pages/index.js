@@ -7,12 +7,14 @@ export default () => (
     <Head title="Scott Shane Opus" />
     <h1>Best of Scott Shane</h1>
     <ul className="articles-container">
-      {articles.map(article => (
-        <ArticleItem
-          article={article}
-          key={`${article.title}${article.notes}`}
-        />
-      ))}
+      {articles.map(article =>
+        article.title === "***NEED HELP FINDING!***" ? null : (
+          <ArticleItem
+            article={article}
+            key={`${article.title}${article.notes}`}
+          />
+        )
+      )}
     </ul>
 
     <style jsx>{`

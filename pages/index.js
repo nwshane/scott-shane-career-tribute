@@ -24,7 +24,7 @@ export default () => (
           <ul>
             {reflectionsByArticle[article.title] &&
               reflectionsByArticle[article.title].map(reflection => (
-                <div>
+                <div key={reflection.reflection}>
                   <h3>Reflections</h3>
                   <div>{reflection.reflection}</div>
                   <p>- {reflection.name}</p>
@@ -35,8 +35,10 @@ export default () => (
       ))}
     </ul>
 
-    <style jsx>{`
-      .hero {
+    <style jsx>{``}</style>
+    <style jsx global>{`
+      body {
+        font-family: "News Cycle", sans-serif;
       }
     `}</style>
   </div>

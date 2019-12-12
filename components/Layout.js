@@ -17,6 +17,10 @@ export default ({ children }) => (
       :global(p) {
         margin: 0;
       }
+
+      :global(img) {
+        max-width: 100%;
+      }
     `}</style>
   </div>
 );

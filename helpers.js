@@ -28,9 +28,9 @@ const formatDate = dateString => {
 };
 
 const getSections = () =>
-  uniq(Object.values(articles).map(article => article.section)).filter(
-    x => !!x
-  );
+  uniq(Object.values(articles).map(article => article.section))
+    .filter(x => !!x)
+    .concat("Letter from the Publisher");
 
 const getPreviousSectionName = (sections, sectionName) =>
   sections[sections.findIndex(name => name === sectionName) - 1];

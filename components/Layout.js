@@ -11,6 +11,7 @@ export default ({ children }) => (
       :global(body) {
         font-family: "News Cycle", sans-serif;
         margin: 0;
+        background: url("/static/paper.png");
       }
 
       :global(p) {

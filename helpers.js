@@ -32,4 +32,7 @@ export const getSections = articles =>
 export const getPreviousSectionName = (sections, sectionName) =>
   sections[sections.findIndex(name => name === sectionName) - 1];
 
+export const getNextSectionName = (sections, sectionName) =>
+  sections[sections.findIndex(name => name === sectionName) + 1];
+
 export const urlify = str => str.replace(/\s/g, "-").toLowerCase();

@@ -1,23 +1,55 @@
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 import articles from "../sheetData/articles";
 import Head from "../components/head";
 import ArticleList from "../components/ArticleList";
-import { getSections, getPreviousSectionName, urlify } from "../helpers";
-
-const sections = getSections(articles);
+import {
+  getSections,
+  getPreviousSectionName,
+  urlify,
+  getNextSectionName
+} from "../helpers";
 
 export default () => {
-  const pageName = sections[2];
+  const sections = getSections(articles);
+  const router = useRouter();
+
+  const pageName = sections.find(
+    sectionName => urlify(sectionName) === router.query.section
+  );
+
+  if (!pageName) return null;
+
   const previousPageName = getPreviousSectionName(sections, pageName);
-  const previousPagePath = urlify(previousPageName);
+  const previousPagePath = previousPageName && urlify(previousPageName);
+  const nextPageName = getNextSectionName(sections, pageName);
+  const nextPagePath = nextPageName && urlify(nextPageName);
 
   return (
     <div>
       <Head title={pageName} />
-      <Link href={`/${previousPagePath}`}>
-        <a>← {previousPageName}</a>
-      </Link>
+      {previousPageName ? (
+        <p>
+          <Link href={`/${previousPagePath}`}>
+            <a>← {previousPageName}</a>
+          </Link>
+        </p>
+      ) : (
+        <p>
+          <Link href="/">
+            <a>← Intro</a>
+          </Link>
+        </p>
+      )}
+      {nextPageName && (
+        <p>
+          <Link href={`/${nextPagePath}`}>
+            <a>→ {nextPageName}</a>
+          </Link>
+        </p>
+      )}
+
       <h1>{pageName}</h1>
 
       <ArticleList

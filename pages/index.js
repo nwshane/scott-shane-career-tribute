@@ -19,12 +19,14 @@ export default () => {
         <p>Dear dad,</p>
         <p>
           I'm going to wait until the webpage is done before writing this intro
-          text. :)
+          text. That's okay though because hopefully you won't see this until
+          it's done! :)
         </p>
         <p>
           Love, <br></br>Nathan + all your family and friends who contributed to
           this project
         </p>
+        <p>December XX, 2019 ---- ADD DATE!</p>
       </div>
 
       <div className="navigation">

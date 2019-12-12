@@ -1,4 +1,4 @@
-import { has, uniq } from "lodash";
+import { uniq } from "lodash";
 import Link from "next/link";
 
 import articles from "../sheetData/articles";
@@ -23,7 +23,9 @@ export default () => (
     </Link>
     <h1>{pageName}</h1>
 
-    <ArticleList articles={articles} />
+    <ArticleList
+      articles={articles.filter(article => article.section === pageName)}
+    />
 
     <style jsx global>{`
       body {

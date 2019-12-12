@@ -11,6 +11,7 @@
     "update-all": "mkdir -p sheetData && run-p update-articles update-reflections"
   },
   "dependencies": {
+    "babel-register": "^6.26.0",
     "google-spreadsheet-to-json": "^1.0.0",
     "lodash": "^4.17.15",
     "next": "^9.1.4",

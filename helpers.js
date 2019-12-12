@@ -1,6 +1,9 @@
-import { uniq } from "lodash";
+const lodash = require("lodash");
+const { uniq } = lodash;
 
-export const formatDate = dateString => {
+const articles = require("./sheetData/articles");
+
+const formatDate = dateString => {
   if (!dateString) return null;
 
   const monthNames = [
@@ -24,15 +27,23 @@ export const formatDate = dateString => {
   } ${dateObject.getDate()}, ${dateObject.getFullYear()}`;
 };
 
-export const getSections = articles =>
+const getSections = () =>
   uniq(Object.values(articles).map(article => article.section)).filter(
     x => !!x
   );
 
-export const getPreviousSectionName = (sections, sectionName) =>
+const getPreviousSectionName = (sections, sectionName) =>
   sections[sections.findIndex(name => name === sectionName) - 1];
 
-export const getNextSectionName = (sections, sectionName) =>
+const getNextSectionName = (sections, sectionName) =>
   sections[sections.findIndex(name => name === sectionName) + 1];
 
-export const urlify = str => str.replace(/\s/g, "-").toLowerCase();
+const urlify = str => str.replace(/\s/g, "-").toLowerCase();
+
+module.exports = {
+  formatDate,
+  getSections,
+  getPreviousSectionName,
+  getNextSectionName,
+  urlify
+};

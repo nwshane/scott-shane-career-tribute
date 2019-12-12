@@ -2,10 +2,9 @@ import Link from "next/link";
 
 import Head from "../components/head";
 import { getSections, urlify } from "../helpers";
-import articles from "../sheetData/articles";
 
 export default () => {
-  const sections = getSections(articles);
+  const sections = getSections();
   const firstSectionName = sections[0];
   const firstSectionPath = firstSectionName && urlify(firstSectionName);
 

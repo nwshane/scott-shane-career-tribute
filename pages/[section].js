@@ -12,7 +12,7 @@ import {
 } from "../helpers";
 
 export default () => {
-  const sections = getSections(articles);
+  const sections = getSections();
   const router = useRouter();
 
   const pageName = sections.find(

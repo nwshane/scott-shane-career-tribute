@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import Head from "../components/head";
+import Layout from "../components/Layout";
 import { getSections, urlify } from "../helpers";
 
 export default () => {
@@ -9,7 +10,7 @@ export default () => {
   const firstSectionPath = firstSectionName && urlify(firstSectionName);
 
   return (
-    <div>
+    <Layout>
       <Head title="Scott Shane Opus" />
 
       <h1>Best of Scott Shane</h1>
@@ -21,12 +22,6 @@ export default () => {
           <a>→ {firstSectionName}</a>
         </Link>
       </p>
-
-      <style jsx global>{`
-        body {
-          font-family: "News Cycle", sans-serif;
-        }
-      `}</style>
-    </div>
+    </Layout>
   );
 };

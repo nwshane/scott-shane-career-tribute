@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import articles from "../sheetData/articles";
 import Head from "../components/head";
+import Layout from "../components/Layout";
 import ArticleList from "../components/ArticleList";
 import {
   getSections,
@@ -27,7 +28,7 @@ export default () => {
   const nextPagePath = nextPageName && urlify(nextPageName);
 
   return (
-    <div>
+    <Layout>
       <Head title={pageName} />
       {previousPageName ? (
         <p>
@@ -77,12 +78,6 @@ export default () => {
           </Link>
         </p>
       )}
-
-      <style jsx global>{`
-        body {
-          font-family: "News Cycle", sans-serif;
-        }
-      `}</style>
-    </div>
+    </Layout>
   );
 };

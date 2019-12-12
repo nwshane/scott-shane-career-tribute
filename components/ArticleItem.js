@@ -21,7 +21,14 @@ export default ({ article }) => (
         reflectionsByArticle[article.title].map(reflection => (
           <div key={reflection.reflection}>
             <h3>Reflections</h3>
-            <div>{reflection.reflection}</div>
+            <div>
+              {reflection.reflection
+                .split("\n")
+                .filter(paragraph => paragraph.trim() !== "")
+                .map(paragraph => (
+                  <p>{paragraph}</p>
+                ))}
+            </div>
             <p>- {reflection.name}</p>
           </div>
         ))}

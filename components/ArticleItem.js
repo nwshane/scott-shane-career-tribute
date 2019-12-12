@@ -25,8 +25,8 @@ export default ({ article }) => (
               {reflection.reflection
                 .split("\n")
                 .filter(paragraph => paragraph.trim() !== "")
-                .map(paragraph => (
-                  <p>{paragraph}</p>
+                .map((paragraph, paragraphIndex) => (
+                  <p key={paragraphIndex}>{paragraph}</p>
                 ))}
             </div>
             <p>- {reflection.name}</p>

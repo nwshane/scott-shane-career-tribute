@@ -1,3 +1,5 @@
+import { uniq } from "lodash";
+
 export const formatDate = dateString => {
   if (!dateString) return null;
 
@@ -21,3 +23,13 @@ export const formatDate = dateString => {
     monthNames[dateObject.getMonth()]
   } ${dateObject.getDate()}, ${dateObject.getFullYear()}`;
 };
+
+export const getSections = articles =>
+  uniq(Object.values(articles).map(article => article.section)).filter(
+    x => !!x
+  );
+
+export const getPreviousSectionName = (sections, sectionName) =>
+  sections[sections.findIndex(name => name === sectionName) - 1];
+
+export const urlify = str => str.replace(/\s/g, "-").toLowerCase();

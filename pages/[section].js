@@ -56,6 +56,28 @@ export default () => {
         articles={articles.filter(article => article.section === pageName)}
       />
 
+      {/* copied from above; todo: make into component */}
+      {previousPageName ? (
+        <p>
+          <Link href={`/${previousPagePath}`}>
+            <a>← {previousPageName}</a>
+          </Link>
+        </p>
+      ) : (
+        <p>
+          <Link href="/">
+            <a>← Intro</a>
+          </Link>
+        </p>
+      )}
+      {nextPageName && (
+        <p>
+          <Link href={`/${nextPagePath}`}>
+            <a>→ {nextPageName}</a>
+          </Link>
+        </p>
+      )}
+
       <style jsx global>{`
         body {
           font-family: "News Cycle", sans-serif;

@@ -13,15 +13,36 @@ export default () => {
     <Layout>
       <Head title="Scott Shane Opus" />
 
-      <h1>Best of Scott Shane</h1>
+      <h1>Ace in a Hole: The Scott Shane Story</h1>
 
-      <div>INTRO TEXT GOES HERE</div>
+      <div className="intro">
+        <p>Dear dad,</p>
+        <p>
+          I'm going to wait until the webpage is done before writing this intro
+          text. :)
+        </p>
+        <p>
+          Love, <br></br>Nathan + all your family and friends who contributed to
+          this project
+        </p>
+      </div>
 
-      <p>
-        <Link href={`/${firstSectionPath}`}>
-          <a>→ {firstSectionName}</a>
-        </Link>
-      </p>
+      <div className="navigation">
+        <p>
+          <Link href={`/${firstSectionPath}`}>
+            <a>→ {firstSectionName}</a>
+          </Link>
+        </p>
+      </div>
+      <style jsx>{`
+        .intro p {
+          margin: 20px 0;
+        }
+
+        .navigation {
+          margin-top: 40px;
+        }
+      `}</style>
     </Layout>
   );
 };

@@ -35,7 +35,7 @@ export default ({ article }) => (
     </ul>
     <style jsx>{`
       .container {
-        margin-bottom: 40px;
+        margin-bottom: 70px;
         list-style-type: none;
         padding-left: 0;
       }
@@ -48,15 +48,16 @@ export default ({ article }) => (
         margin: 0;
       }
       .excerpt {
-        margin-left: 20px;
-        margin-top: 15px;
+        margin-top: 30px;
+        position: relative;
       }
       .excerpt:before {
-        content: "“";
-        font-size: 30px;
-      }
-      .excerpt:after {
+        position: absolute;
         content: "”";
+        font-size: 200px;
+        top: -125px;
+        left: -7px;
+        color: rgba(0, 0, 0, 0.1);
       }
     `}</style>
   </li>

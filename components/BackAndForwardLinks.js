@@ -14,13 +14,20 @@ export default ({ pageName }) => {
   const nextPagePath = nextPageName && urlify(nextPageName);
 
   return (
-    <div>
+    <div className="container">
       {previousPageName ? (
-        <p>
-          <Link href={`/${previousPagePath}`}>
-            <a>← {previousPageName}</a>
-          </Link>
-        </p>
+        <div>
+          <p>
+            <Link href="/">
+              <a>← Back to Beginning</a>
+            </Link>
+          </p>
+          <p>
+            <Link href={`/${previousPagePath}`}>
+              <a>← {previousPageName}</a>
+            </Link>
+          </p>
+        </div>
       ) : (
         <p>
           <Link href="/">
@@ -31,10 +38,17 @@ export default ({ pageName }) => {
       {nextPageName && (
         <p>
           <Link href={`/${nextPagePath}`}>
-            <a>→ {nextPageName}</a>
+            <a>{nextPageName}→</a>
           </Link>
         </p>
       )}
+
+      <style jsx>{`
+        .container {
+          display: flex;
+          justify-content: space-between;
+        }
+      `}</style>
     </div>
   );
 };

@@ -19,9 +19,9 @@ const Head = props => (
     <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />
     <link rel="icon" href="/static/favicon.ico" />
     <link
-      href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap"
+      href="https://fonts.googleapis.com/css?family=News+Cycle:400,700&display=swap"
       rel="stylesheet"
-    ></link>
+    />
     <meta property="og:url" content={props.url || defaultOGURL} />
     <meta property="og:title" content={props.title || ""} />
     <meta

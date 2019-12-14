@@ -24,7 +24,7 @@ export default ({ article }) => {
           <ul className="reflections-list">
             {reflections.map(reflection => (
               <div className="reflection" key={reflection.reflection}>
-                <div>
+                <div className="reflection-text">
                   {reflection.reflection
                     .split("\n")
                     .filter(paragraph => paragraph.trim() !== "")
@@ -32,7 +32,7 @@ export default ({ article }) => {
                       <p key={paragraphIndex}>{paragraph}</p>
                     ))}
                 </div>
-                <p className="name">- {reflection.name}</p>
+                <p className="reflection-name">- {reflection.name}</p>
               </div>
             ))}
           </ul>
@@ -74,8 +74,13 @@ export default ({ article }) => {
         .reflection {
           margin-bottom: 30px;
         }
-        .name {
+        .reflection-text {
+          font-style: italic;
+        }
+        .reflection-name {
           font-weight: 800;
+          padding-left: 60%;
+          margin-top: 10px;
         }
       `}</style>
     </li>

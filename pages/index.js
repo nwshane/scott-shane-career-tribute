@@ -23,8 +23,8 @@ export default () => {
           it's done! :)
         </p>
         <p>
-          Love, <br></br>Nathan + all your family and friends who contributed to
-          this project
+          Love, <br></br>Nathan + all your family, friends, and colleagues who
+          contributed to this project
         </p>
         <p>December XX, 2019 ---- ADD DATE!</p>
       </div>
@@ -32,7 +32,7 @@ export default () => {
       <div className="navigation">
         <p>
           <Link href={`/${firstSectionPath}`}>
-            <a>View Articles and Reflections →</a>
+            <a>View Articles, Excerpts, and Reflections →</a>
           </Link>
         </p>
         <p>

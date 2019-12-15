@@ -32,9 +32,14 @@ export default () => {
       <div className="navigation">
         <p>
           <Link href={`/${firstSectionPath}`}>
-            <a>→ {firstSectionName}</a>
+            <a>Articles and Reflections →</a>
           </Link>
         </p>
+        {/* <p>
+          <Link href={"/timeline"}>
+            <a>Timeline of All Articles →</a>
+          </Link>
+        </p> */}
       </div>
       <style jsx>{`
         .intro p {

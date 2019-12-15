@@ -12,6 +12,7 @@ export default ({ children }) => (
         font-family: "News Cycle", sans-serif;
         margin: 0;
         background: url("/static/paper.png");
+        color: #333;
       }
 
       :global(p) {
@@ -24,6 +25,7 @@ export default ({ children }) => (
 
       :global(a) {
         text-decoration: none;
+        color: #326891;
       }
     `}</style>
   </div>

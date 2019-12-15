@@ -38,7 +38,7 @@ export default ({ pageName }) => {
       {nextPageName && (
         <p>
           <Link href={`/${nextPagePath}`}>
-            <a>{nextPageName}→</a>
+            <a>{nextPageName} →</a>
           </Link>
         </p>
       )}

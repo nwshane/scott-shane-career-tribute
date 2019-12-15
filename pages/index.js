@@ -32,12 +32,12 @@ export default () => {
       <div className="navigation">
         <p>
           <Link href={`/${firstSectionPath}`}>
-            <a>Articles and Reflections →</a>
+            <a>View Articles and Reflections →</a>
           </Link>
         </p>
         <p>
           <Link href={"/timeline"}>
-            <a>Timeline of All Articles →</a>
+            <a>View Timeline of All Articles →</a>
           </Link>
         </p>
       </div>

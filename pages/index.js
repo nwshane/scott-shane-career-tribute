@@ -11,7 +11,7 @@ export default () => {
 
   return (
     <Layout>
-      <Head title="And Another Toast" />
+      <Head />
 
       <h1>And Another Toast: To the Journalism of Scott Shane</h1>
 
@@ -35,11 +35,11 @@ export default () => {
             <a>Articles and Reflections →</a>
           </Link>
         </p>
-        {/* <p>
+        <p>
           <Link href={"/timeline"}>
             <a>Timeline of All Articles →</a>
           </Link>
-        </p> */}
+        </p>
       </div>
       <style jsx>{`
         .intro p {

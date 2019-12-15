@@ -8,6 +8,7 @@ module.exports = {
   exportPathMap: async function() {
     const paths = {
       "/": { page: "/" },
+      "/timeline": { page: "/timeline" },
       "/letter-from-the-publisher": {
         page: "/letter-from-the-publisher",
         query: { section: "letter-from-the-publisher" }

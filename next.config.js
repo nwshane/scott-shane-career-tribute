@@ -22,7 +22,6 @@ module.exports = {
       const sectionPageAlreadyExists = fs.existsSync(
         `./pages/${sectionPath}.js`
       );
-      console.log({ sectionPath, sectionPageAlreadyExists });
 
       if (!sectionPageAlreadyExists) {
         paths[`/${sectionPath}`] = {

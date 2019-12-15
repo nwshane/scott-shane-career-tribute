@@ -13,7 +13,7 @@ export default () => {
     <Layout>
       <Head title="Scott Shane Opus" />
 
-      <h1>Ace in a Hole: The Scott Shane Story</h1>
+      <h1>And Another Toast: To the Journalism of Scott Shane</h1>
 
       <div className="intro">
         <p>Dear dad,</p>

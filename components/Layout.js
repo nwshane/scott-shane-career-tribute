@@ -21,6 +21,10 @@ export default ({ children }) => (
       :global(img) {
         max-width: 100%;
       }
+
+      :global(a) {
+        text-decoration: none;
+      }
     `}</style>
   </div>
 );

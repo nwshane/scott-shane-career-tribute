@@ -51,6 +51,7 @@ export default ({ article }) => {
         .title {
           font-size: 24px;
           margin: 0;
+          text-decoration: underline;
         }
         .excerpt {
           margin-top: 30px;

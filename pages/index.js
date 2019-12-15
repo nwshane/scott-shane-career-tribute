@@ -11,7 +11,7 @@ export default () => {
 
   return (
     <Layout>
-      <Head title="Scott Shane Opus" />
+      <Head title="And Another Toast" />
 
       <h1>And Another Toast: To the Journalism of Scott Shane</h1>
 

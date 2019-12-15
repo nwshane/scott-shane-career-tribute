@@ -19,7 +19,7 @@ export default () => {
         </Link>
       </p>
 
-      <h1>Scott Shane's Articles over Time</h1>
+      <h1>The Journalism of Scott Shane Over Time</h1>
 
       <div className="articles">
         {orderedArticles.map(article => (

@@ -29,7 +29,9 @@ export default ({ article }) => {
                     .split("\n")
                     .filter(paragraph => paragraph.trim() !== "")
                     .map((paragraph, paragraphIndex) => (
-                      <p key={paragraphIndex}>{paragraph}</p>
+                      <p className="reflection-paragraph" key={paragraphIndex}>
+                        {paragraph}
+                      </p>
                     ))}
                 </div>
                 <p className="reflection-name">- {reflection.name}</p>
@@ -77,6 +79,9 @@ export default ({ article }) => {
         }
         .reflection-text {
           font-style: italic;
+        }
+        .reflection-paragraph {
+          margin-bottom: 15px;
         }
         .reflection-name {
           font-weight: 800;

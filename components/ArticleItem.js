@@ -18,7 +18,18 @@ export default ({ article }) => {
           {article.title}
         </a>
       </h2>
-      {article.excerpt && <div className="excerpt">{article.excerpt}</div>}
+      {article.excerpt && (
+        <div className="excerpt">
+          {article.excerpt
+            .split("\n")
+            .filter(paragraph => paragraph.trim() !== "")
+            .map((paragraph, paragraphIndex) => (
+              <p className="paragraph" key={paragraphIndex}>
+                {paragraph}
+              </p>
+            ))}
+        </div>
+      )}
       {reflections && (
         <div className="reflections">
           <ul className="reflections-list">
@@ -29,7 +40,7 @@ export default ({ article }) => {
                     .split("\n")
                     .filter(paragraph => paragraph.trim() !== "")
                     .map((paragraph, paragraphIndex) => (
-                      <p className="reflection-paragraph" key={paragraphIndex}>
+                      <p className="paragraph" key={paragraphIndex}>
                         {paragraph}
                       </p>
                     ))}
@@ -80,7 +91,7 @@ export default ({ article }) => {
         .reflection-text {
           font-style: italic;
         }
-        .reflection-paragraph {
+        .paragraph {
           margin-bottom: 15px;
         }
         .reflection-name {

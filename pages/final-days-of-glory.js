@@ -51,15 +51,25 @@ export default () => {
 
       <h1>{pageName}</h1>
 
-      <div className="rebecca-elisabeth-tribute">
-        {rebeccaElisabethTribute
-          .split("\n")
-          .filter(paragraph => paragraph.trim() !== "")
-          .map((paragraph, paragraphIndex) => (
-            <p className="paragraph" key={paragraphIndex}>
-              {paragraph}
-            </p>
-          ))}
+      <div>
+        <p>
+          Monday, December 16, 2019 (sent by email to the NYTimes Washington
+          Bureau):
+        </p>
+        <h2>
+          A Note from Rebecca Corbett and Elisabeth Bumiller: Scott Shane, Who
+          Broke News Old and New, is Retiring
+        </h2>
+        <div className="rebecca-elisabeth-tribute">
+          {rebeccaElisabethTribute
+            .split("\n")
+            .filter(paragraph => paragraph.trim() !== "")
+            .map((paragraph, paragraphIndex) => (
+              <p className="paragraph" key={paragraphIndex}>
+                {paragraph}
+              </p>
+            ))}
+        </div>
       </div>
 
       <hr></hr>

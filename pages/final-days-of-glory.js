@@ -51,10 +51,30 @@ export default () => {
 
       <h1>{pageName}</h1>
 
+      <p>
+        <a
+          href="https://twitter.com/ScottShaneNYT/status/1206705734915907586?ref_src=twsrc%5Etfw"
+          target="_blank"
+        >
+          Twitter, December 16, 2019:
+        </a>
+      </p>
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">
+          As some kind Twitter folk have noticed, I&#39;m retiring from the NYT
+          at year&#39;s end to do some teaching, writing and who knows what.
+          I&#39;ve had 15 terrific years at the Times, thanks to unmatched
+          editors and astonishing colleagues. And 40 years in journalism, a good
+          round number.
+        </p>
+        &mdash; Scott Shane (@ScottShaneNYT){" "}
+      </blockquote>
+
+      <hr></hr>
+
       <div>
         <p>
-          Monday, December 16, 2019 (sent by email to the NYTimes Washington
-          Bureau):
+          Sent by email to the NYTimes Washington Bureau on December 16, 2019:
         </p>
         <h2>
           A Note from Rebecca Corbett and Elisabeth Bumiller: Scott Shane, Who
@@ -73,6 +93,7 @@ export default () => {
       </div>
 
       <hr></hr>
+
       <img
         alt="Letter from New York Times publisher A. G. Sulzberger"
         className="letter"
@@ -80,14 +101,15 @@ export default () => {
       />
 
       <style jsx>{`
-        .rebecca-elisabeth-tribute {
-          margin-bottom: 30px;
+        blockquote {
+          margin: 0;
+          padding: 0;
+        }
+        hr {
+          margin: 30px 45px;
         }
         .paragraph {
           margin-bottom: 15px;
-        }
-        .letter {
-          margin-top: 30px;
         }
       `}</style>
     </Layout>

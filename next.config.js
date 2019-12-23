@@ -9,6 +9,7 @@ module.exports = {
     const paths = {
       "/": { page: "/" },
       "/timeline": { page: "/timeline" },
+      "/dear-dad": { page: "/dear-dad" },
       "/final-days-of-glory": {
         page: "/final-days-of-glory",
         query: { section: "final-days-of-glory" }

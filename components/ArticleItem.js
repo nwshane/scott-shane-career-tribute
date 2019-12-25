@@ -54,6 +54,7 @@ export default ({ article }) => {
         .title {
           font-size: 24px;
           margin: 0;
+          margin-bottom: 30px;
           text-decoration: underline;
         }
         .reflections {

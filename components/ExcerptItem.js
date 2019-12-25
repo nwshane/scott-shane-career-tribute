@@ -44,7 +44,6 @@ export default ({ excerpt, allowMinimize = false }) => {
       )}
       <style jsx>{`
         .excerpt {
-          margin-top: 30px;
           position: relative;
         }
         .excerpt-short {

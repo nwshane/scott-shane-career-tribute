@@ -68,7 +68,7 @@ export default () => {
               {paragraph}
             </p>
           ))}
-        <p>
+        <p className="paragraph">
           Love, <br></br>Nathan
         </p>
         <p>December 24, 2019</p>

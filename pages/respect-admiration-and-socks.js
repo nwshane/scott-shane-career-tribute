@@ -48,18 +48,8 @@ export default () => {
     <Layout>
       <Head title={pageName} />
       <BackAndForwardLinks pageName={pageName} />
-
       <h1>{pageName}</h1>
-
-      <p>
-        <a
-          href="https://twitter.com/ScottShaneNYT/status/1206705734915907586?ref_src=twsrc%5Etfw"
-          target="_blank"
-        >
-          Twitter, December 16, 2019:
-        </a>
-      </p>
-      <blockquote class="twitter-tweet" data-lang="en">
+      <blockquote className="twitter-tweet" data-lang="en">
         <p lang="en" dir="ltr">
           As some kind Twitter folk have noticed, I&#39;m retiring from the NYT
           at year&#39;s end to do some teaching, writing and who knows what.
@@ -68,7 +58,154 @@ export default () => {
           round number.
         </p>
         &mdash; Scott Shane (@ScottShaneNYT){" "}
+        <a href="https://twitter.com/ScottShaneNYT/status/1206705734915907586?ref_src=twsrc%5Etfw">
+          December 16, 2019
+        </a>
       </blockquote>
+
+      <blockquote
+        className="twitter-tweet"
+        data-conversation="none"
+        data-lang="en"
+      >
+        <p lang="en" dir="ltr">
+          Nope, still in denial. Can’t accept this. Not happening. Won’t let it.
+          Rebecca and I are working on a human blockade. Good luck getting past
+          us.
+        </p>
+        &mdash; Nicole Perlroth (@nicoleperlroth){" "}
+        <a href="https://twitter.com/nicoleperlroth/status/1206726496481472512?ref_src=twsrc%5Etfw">
+          December 17, 2019
+        </a>
+      </blockquote>
+
+      <blockquote
+        className="twitter-tweet"
+        data-conversation="none"
+        data-lang="en"
+      >
+        <p lang="en" dir="ltr">
+          I still remember sending you out to cover a skate park opening on
+          weekend duty when I was filling in as editor. I was nervous. You were
+          cool, and filed a great story. Loved following your work. You’re a
+          great journalist and an even better person!
+        </p>
+        &mdash; Rona Kobell (@rkobell){" "}
+        <a href="https://twitter.com/rkobell/status/1206722580025135105?ref_src=twsrc%5Etfw">
+          December 16, 2019
+        </a>
+      </blockquote>
+
+      <blockquote
+        className="twitter-tweet"
+        data-conversation="none"
+        data-lang="en"
+      >
+        <p lang="en" dir="ltr">
+          One of the best people and reporters I ever had the pleasure to work
+          with. Happy next chapter. I’ll be stunned if it isn’t brilliant.
+        </p>
+        &mdash; Michael Littwin (@mike_littwin){" "}
+        <a href="https://twitter.com/mike_littwin/status/1206737278623764480?ref_src=twsrc%5Etfw">
+          December 17, 2019
+        </a>
+      </blockquote>
+
+      <blockquote
+        className="twitter-tweet"
+        data-conversation="none"
+        data-lang="en"
+      >
+        <p lang="en" dir="ltr">
+          Hard to believe! But there is life after the paper. There is.
+        </p>
+        &mdash; David E. Hoffman (@thedeadhandbook){" "}
+        <a href="https://twitter.com/thedeadhandbook/status/1206745916515979265?ref_src=twsrc%5Etfw">
+          December 17, 2019
+        </a>
+      </blockquote>
+
+      <blockquote className="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">
+          Congratulations Scott! Glad to have worked at two newspapers with one
+          of the finest journalists and human beings I have known.
+        </p>
+        &mdash; Ivan Penn (@ivanlpenn){" "}
+        <a href="https://twitter.com/ivanlpenn/status/1206982540470321152?ref_src=twsrc%5Etfw">
+          December 17, 2019
+        </a>
+      </blockquote>
+
+      <blockquote
+        className="twitter-tweet"
+        data-conversation="none"
+        data-lang="en"
+      >
+        <p lang="en" dir="ltr">
+          An era ends! Scott, I’ll never forget staying late on the desk to edit
+          another Page One story about the anthrax investigation or the NSA. You
+          were my model journalist, from your rigorous reporting to pushing
+          deadline to get the whole story. I’m honored to have worked with you!
+        </p>
+        &mdash; Tim Wheeler (@TBWheeler){" "}
+        <a href="https://twitter.com/TBWheeler/status/1207086563462713344?ref_src=twsrc%5Etfw">
+          December 17, 2019
+        </a>
+      </blockquote>
+
+      <blockquote
+        className="twitter-tweet"
+        data-conversation="none"
+        data-lang="en"
+      >
+        <p lang="en" dir="ltr">
+          The best. Pretty damn good journalist too. Congrats, Pal.
+        </p>
+        &mdash; Michael Ollove (@Michael_Ollove){" "}
+        <a href="https://twitter.com/Michael_Ollove/status/1207011309994295298?ref_src=twsrc%5Etfw">
+          December 17, 2019
+        </a>
+      </blockquote>
+
+      <blockquote
+        className="twitter-tweet"
+        data-conversation="none"
+        data-lang="en"
+      >
+        <p lang="en" dir="ltr">
+          We’ll miss you in the bureau! You could write books and publish them
+          in installments in{" "}
+          <a href="https://twitter.com/nytimes?ref_src=twsrc%5Etfw">@nytimes</a>
+          . Like Dickens or Dostoevsky.
+        </p>
+        &mdash; Edward Wong (@ewong){" "}
+        <a href="https://twitter.com/ewong/status/1206767049923543040?ref_src=twsrc%5Etfw">
+          December 17, 2019
+        </a>
+      </blockquote>
+
+      <blockquote
+        className="twitter-tweet"
+        data-conversation="none"
+        data-lang="en"
+      >
+        <p lang="en" dir="ltr">
+          Last thing I&#39;ll say about they guy from Baltimore: He&#39;s truly
+          in the Pantheon of remarkable journalists. He could do everything
+          while doing everything. He made it all look easy too. I never heard
+          him complain once. He&#39;s a badass. And I&#39;ll miss working with
+          him.
+        </p>
+        &mdash; Adam Goldman (@adamgoldmanNYT){" "}
+        <a href="https://twitter.com/adamgoldmanNYT/status/1206770245702213633?ref_src=twsrc%5Etfw">
+          December 17, 2019
+        </a>
+      </blockquote>
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charset="utf-8"
+      ></script>
 
       <hr></hr>
 
@@ -91,19 +228,21 @@ export default () => {
             ))}
         </div>
       </div>
-
       <hr></hr>
-
       <img
         alt="Letter from New York Times publisher A. G. Sulzberger"
         className="letter"
         src="/static/images/letter-from-the-publisher.jpg"
       />
-
       <style jsx>{`
-        blockquote {
+        .twitter-tweet {
           margin: 0;
+          margin-bottom: 15px;
           padding: 0;
+        }
+        .twitter-tweet + .twitter-tweet {
+          padding-left: 30px;
+          border-left: 5px solid #9e9e9e;
         }
         hr {
           margin: 30px 45px;

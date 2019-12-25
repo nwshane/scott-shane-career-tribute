@@ -50,7 +50,7 @@ export default () => {
           margin-bottom: 50px;
         }
         .container {
-          margin-bottom: 20px;
+          margin-bottom: 50px;
           list-style-type: none;
           padding-left: 0;
         }

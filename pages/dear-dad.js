@@ -43,7 +43,7 @@ export default () => {
 
   return (
     <Layout>
-      <Head />
+      <Head title="Dear Dad" />
 
       <h1>And Another Toast: To the Journalism of Scott Shane</h1>
 

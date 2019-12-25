@@ -5,6 +5,38 @@ import { formatDate } from "../helpers";
 
 const reflectionsByArticle = groupBy(allReflections, "article");
 
+const ExcerptItem = ({ excerpt }) => {
+  return (
+    <div className="excerpt">
+      {excerpt
+        .split("\n")
+        .filter(paragraph => paragraph.trim() !== "")
+        .map((paragraph, paragraphIndex) => (
+          <p className="paragraph" key={paragraphIndex}>
+            {paragraph}
+          </p>
+        ))}
+      <style jsx>{`
+        .excerpt {
+          margin-top: 30px;
+          position: relative;
+        }
+        .excerpt:before {
+          position: absolute;
+          content: "”";
+          font-size: 200px;
+          top: -125px;
+          left: -7px;
+          color: rgba(0, 0, 0, 0.1);
+        }
+        .paragraph {
+          margin-bottom: 15px;
+        }
+      `}</style>
+    </div>
+  );
+};
+
 export default ({ article }) => {
   const reflections = reflectionsByArticle[article.title];
 
@@ -18,18 +50,7 @@ export default ({ article }) => {
           {article.title}
         </a>
       </h2>
-      {article.excerpt && (
-        <div className="excerpt">
-          {article.excerpt
-            .split("\n")
-            .filter(paragraph => paragraph.trim() !== "")
-            .map((paragraph, paragraphIndex) => (
-              <p className="paragraph" key={paragraphIndex}>
-                {paragraph}
-              </p>
-            ))}
-        </div>
-      )}
+      {article.excerpt && <ExcerptItem excerpt={article.excerpt} />}
       {reflections && (
         <div className="reflections">
           <ul className="reflections-list">
@@ -65,18 +86,6 @@ export default ({ article }) => {
           font-size: 24px;
           margin: 0;
           text-decoration: underline;
-        }
-        .excerpt {
-          margin-top: 30px;
-          position: relative;
-        }
-        .excerpt:before {
-          position: absolute;
-          content: "”";
-          font-size: 200px;
-          top: -125px;
-          left: -7px;
-          color: rgba(0, 0, 0, 0.1);
         }
         .reflections {
           margin-left: 40px;

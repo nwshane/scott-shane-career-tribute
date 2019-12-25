@@ -66,6 +66,7 @@ export default ({ excerpt, allowMinimize = false }) => {
           top: -125px;
           left: -7px;
           color: rgba(0, 0, 0, 0.1);
+          z-index: -1;
         }
         .paragraph {
           margin-bottom: 15px;

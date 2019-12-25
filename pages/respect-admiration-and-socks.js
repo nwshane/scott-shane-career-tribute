@@ -125,7 +125,11 @@ export default () => {
         </a>
       </blockquote>
 
-      <blockquote className="twitter-tweet" data-lang="en">
+      <blockquote
+        className="twitter-tweet"
+        data-conversation="none"
+        data-lang="en"
+      >
         <p lang="en" dir="ltr">
           Congratulations Scott! Glad to have worked at two newspapers with one
           of the finest journalists and human beings I have known.

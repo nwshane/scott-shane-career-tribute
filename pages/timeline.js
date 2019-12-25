@@ -33,7 +33,9 @@ export default () => {
                 {article.title}
               </a>
             </h2>
-            {article.excerpt && <ExcerptItem excerpt={article.excerpt} />}
+            {article.excerpt && (
+              <ExcerptItem excerpt={article.excerpt} allowMinimize />
+            )}
           </div>
         ))}
       </div>

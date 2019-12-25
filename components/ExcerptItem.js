@@ -1,9 +1,8 @@
 import { useState } from "react";
 import LinesEllipsis from "react-lines-ellipsis";
 
-export default ({ excerpt }) => {
-  const [fullTextIsVisible, setFullTextIsVisible] = useState(false);
-  const allowMinimize = true;
+export default ({ excerpt, allowMinimize = false }) => {
+  const [fullTextIsVisible, setFullTextIsVisible] = useState(!allowMinimize);
 
   const preparedText = excerpt
     .split("\n")

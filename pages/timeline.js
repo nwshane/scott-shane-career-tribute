@@ -5,6 +5,7 @@ import Head from "../components/head";
 import Layout from "../components/Layout";
 import { formatDate } from "../helpers";
 import articles from "../sheetData/articles";
+import ExcerptItem from "../components/ExcerptItem";
 
 const orderedArticles = sortBy(articles, article => new Date(article.date));
 
@@ -23,7 +24,7 @@ export default () => {
 
       <div className="articles">
         {orderedArticles.map(article => (
-          <div className="container">
+          <div className="container" key={article.title}>
             <p className="line-above-title">
               {formatDate(article.date) || "No Date"} | {article.mediaCompany}
             </p>
@@ -32,6 +33,7 @@ export default () => {
                 {article.title}
               </a>
             </h2>
+            {article.excerpt && <ExcerptItem excerpt={article.excerpt} />}
           </div>
         ))}
       </div>

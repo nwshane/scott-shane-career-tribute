@@ -60,9 +60,9 @@ export default ({ excerpt, allowMinimize = false }) => {
         }
         .excerpt:before {
           position: absolute;
-          content: "”";
+          content: "“";
           font-size: 200px;
-          top: -125px;
+          top: -122px;
           left: -7px;
           color: rgba(0, 0, 0, 0.1);
           z-index: -1;

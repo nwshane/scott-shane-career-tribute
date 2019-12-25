@@ -10,9 +10,9 @@ module.exports = {
       "/": { page: "/" },
       "/timeline": { page: "/timeline" },
       "/dear-dad": { page: "/dear-dad" },
-      "/final-days-of-glory": {
-        page: "/final-days-of-glory",
-        query: { section: "final-days-of-glory" }
+      "/respect-admiration-and-socks": {
+        page: "/respect-admiration-and-socks",
+        query: { section: "respect-admiration-and-socks" }
       }
     };
 

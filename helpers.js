@@ -30,7 +30,7 @@ const formatDate = dateString => {
 const getSections = () =>
   uniq(Object.values(articles).map(article => article.section))
     .filter(x => !!x)
-    .concat("Final Days of Glory");
+    .concat("Respect, Admiration, and Socks");
 
 const getPreviousSectionName = (sections, sectionName) =>
   sections[sections.findIndex(name => name === sectionName) - 1];
@@ -38,7 +38,11 @@ const getPreviousSectionName = (sections, sectionName) =>
 const getNextSectionName = (sections, sectionName) =>
   sections[sections.findIndex(name => name === sectionName) + 1];
 
-const urlify = str => str.replace(/\s/g, "-").toLowerCase();
+const urlify = str =>
+  str
+    .replace(/[,'.]/g, "")
+    .replace(/\s/g, "-")
+    .toLowerCase();
 
 module.exports = {
   formatDate,

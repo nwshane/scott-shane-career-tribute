@@ -16,7 +16,7 @@ export default ({ pageName }) => {
   return (
     <div className="container">
       {previousPageName ? (
-        <div>
+        <div className="previous">
           <p>
             <Link href="/">
               <a>← Back to Beginning</a>
@@ -29,14 +29,14 @@ export default ({ pageName }) => {
           </p>
         </div>
       ) : (
-        <p>
+        <p className="previous">
           <Link href="/">
             <a>← Intro</a>
           </Link>
         </p>
       )}
       {nextPageName && (
-        <p>
+        <p className="next">
           <Link href={`/${nextPagePath}`}>
             <a>{nextPageName} →</a>
           </Link>
@@ -47,6 +47,12 @@ export default ({ pageName }) => {
         .container {
           display: flex;
           justify-content: space-between;
+        }
+        .previous {
+          max-width: 45%;
+        }
+        .next {
+          max-width: 45%;
         }
       `}</style>
     </div>
